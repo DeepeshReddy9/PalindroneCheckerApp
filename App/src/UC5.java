@@ -1,19 +1,21 @@
-public class UC4 {
-    public static void main(String[] args) {
-        String input = "LEVEL";
+import java.util.Stack;
 
-        char[] characters = input.toCharArray();
-        int start = 0;
-        int end = characters.length - 1;
+public class UC5 {
+    public static void main(String[] args) {
+        String input = "RADAR";
+
+        Stack<Character> stack = new Stack<>();
         boolean isPalindrome = true;
 
-        while (start < end) {
-            if (characters[start] != characters[end]) {
+        for (int i = 0; i < input.length(); i++) {
+            stack.push(input.charAt(i));
+        }
+
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) != stack.pop()) {
                 isPalindrome = false;
                 break;
             }
-            start++;
-            end--;
         }
 
         System.out.println("Input String : " + input);
