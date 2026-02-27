@@ -12,7 +12,7 @@ public class PalindroneCheckerApp {
         }
 
         if (word.equals(reversed)) {
-            System.out.println(word + " is a Palindrome");
+            System.out.println(word + " is --- a Palindrome");
         } else {
             System.out.println(word + " is NOT a Palindrome");
         }
